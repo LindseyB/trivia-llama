@@ -1,0 +1,17 @@
+development: &non_production_settings
+  site_url: http://localhost:1337
+  site_name: Trivia Llama
+  admin_email: llama@churchof1337.com
+
+test:
+  <<: *non_production_settings
+
+staging:
+  site_url: http://staging.example.com
+  site_name: Bort
+  admin_email: bort@bort.com
+
+production:
+  site_url: http://llama.churchof1337.com
+  site_name: Trivia Llama
+  admin_email: llama@churchof1337.com

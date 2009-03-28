@@ -1,0 +1,15 @@
+If you're seeing this... it worked.
+
+Current answers
+<table>
+	<tr><th>sender</th><th>text</th></tr>
+	<% @timeline.each do |t| %>
+	<tr>
+		<td><%= t.user.screen_name %>
+		<td><%= t.text %></td>
+	</tr>
+<% end %>
+</table>
+
+Correct count
+<%= @correct.length %>

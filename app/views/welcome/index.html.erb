@@ -1,0 +1,11 @@
+<h1>Welcome to the Trivia Llama</h1>
+
+<h2>About the Trivia Llama</h2>
+<p>The Trivia Llama lives on <%= link_to "Twitter", "http://www.twitter.com/" %>. You can <%= link_to "sign up", signup_path %> for an account, and then <%= link_to "follow it", "http://www.twitter.com/TriviaLlama" %>. The Llama will pose a question, and then wait for you to answer. Respond to the Llama with '@triviallama $ANSWER' and, if you're right, the Llama will give you some points, and pose another question. Check back at the site to see your score!</p>
+<br />
+<p>Top 10 Players</p>
+<ol>
+<% @top10.each do |u|  %>
+	<li><%= u.login %>, with a score of <%= u.points %></li>
+<% end %>
+</ol>

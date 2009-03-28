@@ -1,0 +1,26 @@
+<%= title "Login", :h2 %>
+<% form_tag session_path do %>
+	<fieldset>
+		<legend>Your Details</legend>
+		<table>
+			<tr>
+				<td><%= label_tag 'login', 'Username' %></td>
+				<td><%= text_field_tag 'login', @login %></td>
+			<tr>
+
+			<tr>
+				<td><%= label_tag 'password' %></td>
+				<td><%= password_field_tag 'password', nil %></td>
+			<tr>
+
+			<tr>
+				<td><%= label_tag 'remember_me', 'Remember me' %></td>
+				<td><%= check_box_tag 'remember_me', '1', @remember_me %></td>
+			<tr>
+			</table>
+	</fieldset>
+	<div class="buttons">
+		<%= submit_tag 'Login' %>
+		<%= link_to 'Forgotten Password', forgot_password_path %>
+	</div>
+<% end -%>
