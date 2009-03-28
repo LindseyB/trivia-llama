@@ -45,6 +45,11 @@ h1
 	font-family: Calibri,Helvetica,FreeSans,Geneva,verdana,sans-serif;
 }
 
+h2, h3
+{
+	padding-left: 10px;
+}
+
 p
 {
 	font-family: Calibri,Helvetica,FreeSans,Geneva,verdana,sans-serif;

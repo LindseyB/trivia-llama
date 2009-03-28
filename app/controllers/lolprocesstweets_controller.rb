@@ -20,7 +20,9 @@ class LolprocesstweetsController < ApplicationController
 		current_question = Currentq.find(:first)
 		@question = Question.find_by_id(current_question.num)
 
-		@correct = @timeline.select { |t| t.text == @question.answer }
+		@correct = @timeline.collect { |t| t.text = t.text.downcase; t;}
+		@answer = @question.answer.downcase
+		@correct = @timeline.select { |t| t.text.downcase == @question.answer.downcase  }
 		if(@correct.length > 0)
 			@winrar_name = @correct.reverse
 			@winrar_name = @winrar_name[0].user.screen_name

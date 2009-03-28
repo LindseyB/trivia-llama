@@ -2,10 +2,12 @@
 
 <h2>About the Trivia Llama</h2>
 <p>The Trivia Llama lives on <%= link_to "Twitter", "http://www.twitter.com/" %>. You can <%= link_to "sign up", signup_path %> for an account, and then <%= link_to "follow it", "http://www.twitter.com/TriviaLlama" %>. The Llama will pose a question, and then wait for you to answer. Respond to the Llama with '@triviallama $ANSWER' and, if you're right, the Llama will give you some points, and pose another question. Check back at the site to see your score!</p>
+<h3>IMPORTANT NOTE!!!</h3>
+<p>The username that you use on this site is the same as your Twitter username. If you don't use the same one, we can't follow you... so don't mess it up.</p>
 <br />
 <p>Top 10 Players</p>
 <ol>
 <% @top10.each do |u|  %>
-	<li><%= u.login %>, with a score of <%= u.points %></li>
+  <li><%= u.login %>, with a score of <%= u.points %> m/s<sup>2</sup></li>
 <% end %>
 </ol>
