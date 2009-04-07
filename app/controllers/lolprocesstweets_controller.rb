@@ -4,8 +4,8 @@ class LolprocesstweetsController < ApplicationController
 		gem('mbbx6spp-twitter4r', '0.3.1')
 		require('twitter')
 
-		client = Twitter::Client.new(:login => 'username',
-	    							 :password => 'password')
+		client = Twitter::Client.new(:login => APP_CONFIG['username'],
+																 :password => APP_CONFIG['password'])
 
 		earlier = Time.new - 60*10*60 # last 10 minutes
 		tl = client.timeline_for(:friends, :since => earlier, :count => 1000)

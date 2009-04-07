@@ -51,7 +51,7 @@ class UsersController < ApplicationController
 	uri = '/friendships/create/' + user.login + '.xml'
 	req = Net::HTTP::Post.new uri
 
-	req.basic_auth 'nick', 'password'
+	req.basic_auth APP_CONFIG['username'], APP_CONFIG['password']
 	res = twitter.request req
 
   end
