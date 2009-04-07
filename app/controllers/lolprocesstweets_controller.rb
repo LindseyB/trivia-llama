@@ -36,6 +36,8 @@ class LolprocesstweetsController < ApplicationController
 			@after_points = @winrar.points
 			@winrar.save
 
+			client.status(:post, "Congrats to " + @winrar.login + "! They gave the correct answer, and now have " + @winrar.points.to_s + " points!")
+
 			redirect_to "/lolprocesstweets/newquestion"
 		else
 		end
