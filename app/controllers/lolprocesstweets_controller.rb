@@ -56,8 +56,8 @@ class LolprocesstweetsController < ApplicationController
 		@question = Question.find_by_id(current_question.num)
 
 		# send out a message with the question's text
-		client = Twitter::Client.new(:login => 'triviallama',
-																   :password => '1337hax')
+		client = Twitter::Client.new(:login => APP_CONFIG['username'],
+																 :password => APP_CONFIG['password'])
 		client.status(:post, @question.body)
 
 	end
